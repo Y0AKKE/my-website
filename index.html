@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Alexander Hajnal — Vienna-based video producer, editor and content creator." name="description"/>
-<title>Alexander Hajnal — Video Producer &amp; Editor</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Libre+Caslon+Display&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Alexander Hajnal — Vienna-based video producer, editor and content creator." name="description" />
+  <title>Alexander Hajnal — Video Producer &amp; Editor</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Libre+Caslon+Display&amp;display=swap"
+    rel="stylesheet" />
+  <style>
     :root {
       --paper: #f7f6f1;
       --ink: #101010;
       --muted: #6a6a66;
-     
+
       --max: 1240px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: var(--paper);
@@ -28,15 +37,27 @@
       line-height: 1.45;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; height: auto; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     .shell {
       width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
-    .eyebrow, .meta, .nav a, .tools-list, .contact-list {
+    .eyebrow,
+    .meta,
+    .nav a,
+    .tools-list,
+    .contact-list {
       text-transform: uppercase;
       letter-spacing: .06em;
       font-size: .72rem;
@@ -54,8 +75,13 @@
       color: white;
     }
 
-    .nav a { width: max-content; }
-    .nav a:hover { text-decoration: line-through; }
+    .nav a {
+      width: max-content;
+    }
+
+    .nav a:hover {
+      text-decoration: line-through;
+    }
 
     .hero {
       min-height: 100vh;
@@ -65,7 +91,7 @@
       overflow: hidden;
     }
 
-    
+
     .hero-art img {
       display: block;
       width: 100%;
@@ -76,24 +102,24 @@
       filter: contrast(1.05);
     }
 
-    .hero-art{
-      width:min(940px,94vw);
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+    .hero-art {
+      width: min(940px, 94vw);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    .hero-subtitle{
-      position:static;
-      transform:none;
-      margin-top:42px;
-      white-space:nowrap;
-      font-size:clamp(.62rem,1vw,.78rem);
-      letter-spacing:.07em;
-      text-transform:uppercase;
-      text-align:center;
+    .hero-subtitle {
+      position: static;
+      transform: none;
+      margin-top: 42px;
+      white-space: nowrap;
+      font-size: clamp(.62rem, 1vw, .78rem);
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      text-align: center;
     }
 
     section {
@@ -164,7 +190,10 @@
       font-weight: 400;
     }
 
-    .project .meta { margin-top: 6px; color: var(--muted); }
+    .project .meta {
+      margin-top: 6px;
+      color: var(--muted);
+    }
 
     .experiments-grid {
       display: grid;
@@ -179,12 +208,12 @@
     }
 
     .experiment-media img,
-.experiment-media video{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
+    .experiment-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .experiment h3 {
       margin: 12px 0 4px;
@@ -200,7 +229,9 @@ display:block;
       font-size: .92rem;
     }
 
-    .about-grid, .background-grid, .contact-grid {
+    .about-grid,
+    .background-grid,
+    .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(250px, .65fr);
       gap: 9vw;
@@ -221,9 +252,12 @@ display:block;
       filter: grayscale(1) contrast(1.05);
     }
 
-    .background-grid + .thesis { margin-top: 100px; }
+    .background-grid+.thesis {
+      margin-top: 100px;
+    }
 
-    .degree h3, .thesis h3 {
+    .degree h3,
+    .thesis h3 {
       margin: 0 0 8px;
       font-family: "Libre Caslon Display", Georgia, serif;
       font-weight: 400;
@@ -231,8 +265,15 @@ display:block;
       line-height: 1.05;
     }
 
-    .degree p, .thesis p { margin: 7px 0; max-width: 62ch; }
-    .muted { color: var(--muted); }
+    .degree p,
+    .thesis p {
+      margin: 7px 0;
+      max-width: 62ch;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
 
     .thesis {
       display: grid;
@@ -242,13 +283,14 @@ display:block;
       padding-top: 40px;
       border-top: 1px solid var(--line);
     }
-  
+
 
     .thesis-image {
       max-width: 410px;
       justify-self: end;
       mix-blend-mode: multiply;
     }
+
     .education-list {
       display: flex;
       flex-direction: column;
@@ -276,6 +318,7 @@ display:block;
     .htl-logo {
       max-width: 230px;
     }
+
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -313,7 +356,10 @@ display:block;
       object-fit: contain;
     }
 
-    .contact-grid { align-items: end; }
+    .contact-grid {
+      align-items: end;
+    }
+
     .contact-list {
       list-style: none;
       margin: 24px 0 0;
@@ -321,8 +367,13 @@ display:block;
       line-height: 2;
     }
 
-    .contact-list a { border-bottom: 1px solid transparent; }
-    .contact-list a:hover { border-color: var(--ink); }
+    .contact-list a {
+      border-bottom: 1px solid transparent;
+    }
+
+    .contact-list a:hover {
+      border-color: var(--ink);
+    }
 
     .contact-image {
       justify-self: end;
@@ -338,7 +389,7 @@ display:block;
       letter-spacing: .06em;
     }
 
-    
+
     .project-link {
       display: block;
       width: min(900px, 100%);
@@ -394,7 +445,9 @@ display:block;
         padding-top: 120px;
       }
 
-      section { padding: 64px 0; }
+      section {
+        padding: 64px 0;
+      }
 
       .experiments-grid,
       .about-grid,
@@ -420,14 +473,28 @@ display:block;
         max-width: 100%;
       }
 
-      .tools-grid { grid-template-columns: 1fr 1fr; }
-      .contact-image { margin-top: 28px; }
+      .tools-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-image {
+        margin-top: 28px;
+      }
     }
 
     @media (max-width: 520px) {
-      .shell { width: min(calc(100% - 24px), var(--max)); }
-      .nav { top: 14px; left: 14px; }
-      .hero { min-height: 68vh; }
+      .shell {
+        width: min(calc(100% - 24px), var(--max));
+      }
+
+      .nav {
+        top: 14px;
+        left: 14px;
+      }
+
+      .hero {
+        min-height: 68vh;
+      }
 
       .hero-art {
         width: calc(100vw - 24px);
@@ -452,195 +519,216 @@ display:block;
         grid-template-columns: 1fr;
       }
 
-      .projects { gap: 64px; }
-      .section-title { margin-bottom: 24px; }
+      .projects {
+        gap: 64px;
+      }
+
+      .section-title {
+        margin-bottom: 24px;
+      }
     }
-</style>
+  </style>
 </head>
+
 <body>
-<nav aria-label="Main navigation" class="nav">
-<a href="#projects">Projects</a>
-<a href="#experiments">3D / Experiments</a>
-<a href="#about">About Me</a>
-<a href="#background">Background</a>
-<a href="#tools">Tools</a>
-<a href="#contact">Kontakt</a>
-</nav>
-<header class="hero">
-<div class="hero-art">
-<img alt="Alexander Hajnal portfolio title artwork" src="assets/hero.png"/>
-<div class="hero-subtitle">Video Producer · Editor · Content Creator</div>
-</div>
-</header>
-<main>
-<section id="projects">
-<div class="shell">
-<h2 class="section-title">Projects</h2>
-<div class="projects">
-<a class="project-link" href="https://www.youtube.com/watch?v=IS43i37ipHg" rel="noopener noreferrer" target="_blank"><article class="project">
-<div class="project-media"><img alt="Still from Observed" src="assets/observed.png"/></div>
-<h3>Observed (2026)</h3>
-<div class="meta">Production · Editing · Sound</div>
-</article></a>
-<a class="project-link" href="https://www.youtube.com/watch?v=Y2w3XV0UPJY" rel="noopener noreferrer" target="_blank"><article class="project">
-<div class="project-media"><img alt="Still from Poisonous Flowers" src="assets/pf.png"/></div>
-<h3>Poisonous Flowers (2024)</h3>
-<div class="meta">Assistant Director · Art Director · Post-Production</div>
-</article></a>
-<a class="project-link" href="https://www.okto.tv/de/sendereihe/fhctv/video/676c43f5051f8/c-tv-191" rel="noopener noreferrer" target="_blank"><article class="project">
-<div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/lh.png"/></div>
-<h3>Löwinnenhof — Documentary Series (2024)</h3>
-<div class="meta">Camera · Editing</div>
-</article></a>
-<a class="project-link" href="https://youtu.be/MD8Xjh2CZpY" rel="noopener noreferrer" target="_blank"><article class="project">
-<div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/tomorrow.png"/></div>
-<h3>Tomorrow (2023)</h3>
-<div class="meta">Animation · Story · Sound Design</div>
-</article></a>
-<article class="project placeholder-project">
-<div class="project-media placeholder-media">
-<span>VIDEO PROJECT 05</span>
-</div>
-<h3>Upcoming Video Project</h3>
-<div class="meta">Role · Format · Year</div>
-</article>
-</div>
-</div>
-</section>
-<section id="experiments">
-<div class="shell">
-<h2 class="section-title">3D / Experiments</h2>
-<div class="experiments-grid">
-<article class="experiment">
-<div class="experiment-media">
-<video autoplay="" loop="" muted="" playsinline="">
-<source src="assets/3d.mp4" type="video/mp4"/>
-</video>
-</div>
-<h3>Metal Study</h3>
-<div class="meta">Blender · Lighting &amp; Material Experiment</div>
-</article>
-<a class="experiment-link" href="https://www.lucid-dreams.at/artists/15-a-moment-in-time" rel="noopener noreferrer" target="_blank"><article class="experiment">
-<div class="experiment-media"><img alt="Cave sound design project" src="assets/cave.png"/></div>
-<h3>Cave Sound Design</h3>
-<div class="meta">Unity VR Game · Sound Design &amp; Audio Production</div>
-<p>Designed and implemented environmental and mechanical sounds for an underground cave environment.</p>
-</article></a>
-</div>
-</div>
-</section>
-<section id="about">
-<div class="shell">
-<h2 class="section-title">About Me</h2>
-<div class="about-grid">
-<p class="lead">I’m a Vienna-based video producer and editor focused on editing, camera work and audiovisual experimentation. My work moves between film, event production and digital media, with a particular interest in rhythm, sound and unconventional visual aesthetics.</p>
-<img alt="Portrait of Alexander Hajnal" class="portrait" src="assets/about.jpg"/>
-</div>
-</div>
-</section>
-<section id="background">
-<div class="shell">
-<h2 class="section-title">Background</h2>
-<div class="education-list">
-<article class="education-entry">
-<div class="degree">
-<div class="eyebrow">Higher Education</div>
-<h3>BSc Media Technology</h3>
-<p>≈University of Applied Sciences St. Pölten · 2023–2026</p>
-<p class="muted">Focus on audiovisual media production, post-production, camera technology, audio and interactive media.</p>
-</div>
-<img alt="FH St. Pölten University of Applied Sciences logo" class="education-logo" src="assets/ustp.png"/>
-</article>
-<article class="education-entry">
-<div class="degree">
-<div class="eyebrow">Secondary Technical Education</div>
-<h3>Media Technology</h3>
-<p>HTL Donaustadt · High School Diploma, 2019</p>
-<p class="muted">Technical education in media technology with a focus on audiovisual production and digital media.</p>
-</div>
-<img alt="HTL Donaustadt logo" class="education-logo htl-logo" src="assets/htl-donaustadt.png"/>
-</article>
-</div>
-<article class="thesis">
-<div>
-<div class="eyebrow">Bachelor Thesis · In Progress, 2026</div>
-<h3>Aestheticized Violence in Japanese Horror Films</h3>
-<p><em>An audiovisual analysis of Tokyo Gore Police and Tetsuo: The Iron Man</em></p>
-<p class="muted">Exploring how editing, sound design, practical effects and body imagery shape the aesthetics of violence in Japanese horror cinema.</p>
-</div>
-<img alt="Visual references for the bachelor thesis" class="thesis-image" src="assets/thesis.png"/>
-</article>
-</div>
-</section>
-<section id="tools">
-<div class="shell">
-<h2 class="section-title">Tools &amp; Certifications</h2>
-<div class="tools-grid">
-<div class="tool-group">
-<h3>Edit</h3>
-<ul class="tools-list">
-<li>Premiere Pro</li>
-<li>Avid Media Composer</li>
-<li>DaVinci Resolve</li>
-</ul>
-</div>
-<div class="tool-group">
-<h3>Motion / 3D</h3>
-<ul class="tools-list">
-<li>After Effects</li>
-<li>Blender</li>
-<li>Autodesk Maya</li>
-<li>TouchDesigner</li>
-</ul>
-</div>
-<div class="tool-group">
-<h3>Camera / Production</h3>
-<ul class="tools-list">
-<li>Mirrorless Camera Systems</li>
-<li>Lighting</li>
-<li>Gimbal</li>
-<li>On-Set Data Management</li>
-</ul>
-</div>
-<div class="tool-group">
-<h3>Audio</h3>
-<ul class="tools-list">
-<li>Pro Tools</li>
-<li>Ableton Live</li>
-</ul>
-</div>
-<div class="tool-group">
-<h3>Certified</h3>
-<div class="badges">
-<img alt="Adobe Certified Professional Premiere Pro certification" class="certificate-logo" src="assets/adobe.png"/>
-<img alt="Avid Media Composer certification" class="certificate-logo" src="assets/avid.png"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="contact">
-<div class="shell">
-<h2 class="section-title">Kontakt</h2>
-<div class="contact-grid">
-<div>
-<div class="eyebrow">Alexander Hajnal · Vienna, Austria</div>
-<ul class="contact-list">
-<li><a href="tel:+4369919283681">+43 699 19283681</a></li>
-<li><a href="mailto:alexander.hajnal@yahoo.com">alexander.hajnal@yahoo.com</a></li>
-<li><a href="https://linkedin.com/in/hajnalex" rel="noopener" target="_blank">linkedin.com/in/hajnalex</a></li>
-</ul>
-</div>
-<img alt="Alexander Hajnal operating a camera" class="contact-image" src="assets/contact.jpg"/>
-</div>
-</div>
-</section>
-</main>
-<footer>
-<div class="shell">© <span id="year"></span> Alexander Hajnal</div>
-</footer>
-<script>
+  <nav aria-label="Main navigation" class="nav">
+    <a href="#projects">Projects</a>
+    <a href="#experiments">3D / Experiments</a>
+    <a href="#about">About Me</a>
+    <a href="#background">Background</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+  <header class="hero">
+    <div class="hero-art">
+      <img alt="Alexander Hajnal portfolio title artwork" src="assets/hero.png" />
+      <div class="hero-subtitle">Video Producer · Editor · Content Creator</div>
+    </div>
+  </header>
+  <main>
+    <section id="projects">
+      <div class="shell">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+          <a class="project-link" href="https://www.youtube.com/watch?v=IS43i37ipHg" rel="noopener noreferrer"
+            target="_blank">
+            <article class="project">
+              <div class="project-media"><img alt="Still from Observed" src="assets/observed.png" /></div>
+              <h3>Observed (2026)</h3>
+              <div class="meta">Production · Editing · Sound</div>
+            </article>
+          </a>
+          <a class="project-link" href="https://www.youtube.com/watch?v=Y2w3XV0UPJY" rel="noopener noreferrer"
+            target="_blank">
+            <article class="project">
+              <div class="project-media"><img alt="Still from Poisonous Flowers" src="assets/pf.png" /></div>
+              <h3>Poisonous Flowers (2024)</h3>
+              <div class="meta">Assistant Director · Art Director · Post-Production</div>
+            </article>
+          </a>
+          <a class="project-link" href="https://www.okto.tv/de/sendereihe/fhctv/video/676c43f5051f8/c-tv-191"
+            rel="noopener noreferrer" target="_blank">
+            <article class="project">
+              <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/lh.png" /></div>
+              <h3>Löwinnenhof — Documentary Series (2024)</h3>
+              <div class="meta">Camera · Editing</div>
+            </article>
+          </a>
+          <a class="project-link" href="https://youtu.be/MD8Xjh2CZpY" rel="noopener noreferrer" target="_blank">
+            <article class="project">
+              <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/tomorrow.png" /></div>
+              <h3>Tomorrow (2023)</h3>
+              <div class="meta">Animation · Story · Sound Design</div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="experiments">
+      <div class="shell">
+        <h2 class="section-title">3D / Experiments</h2>
+        <div class="experiments-grid">
+          <article class="experiment">
+            <div class="experiment-media">
+              <video autoplay="" loop="" muted="" playsinline="">
+                <source src="assets/3d.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h3>Metal Study</h3>
+            <div class="meta">Blender · Lighting &amp; Material Experiment</div>
+          </article>
+          <a class="experiment-link" href="https://www.lucid-dreams.at/artists/15-a-moment-in-time"
+            rel="noopener noreferrer" target="_blank">
+            <article class="experiment">
+              <div class="experiment-media"><img alt="Cave sound design project" src="assets/cave.png" /></div>
+              <h3>Cave Sound Design</h3>
+              <div class="meta">Unity VR Game · Sound Design &amp; Audio Production</div>
+              <p>Designed and implemented environmental and mechanical sounds for an underground cave environment.</p>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="shell">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <p class="lead">I’m a Vienna-based video producer and editor focused on editing, camera work and audiovisual
+            experimentation. My work moves between film, event production and digital media, with a particular interest
+            in rhythm, sound and unconventional visual aesthetics.</p>
+          <img alt="Portrait of Alexander Hajnal" class="portrait" src="assets/about.jpg" />
+        </div>
+      </div>
+    </section>
+    <section id="background">
+      <div class="shell">
+        <h2 class="section-title">Background</h2>
+        <div class="education-list">
+          <article class="education-entry">
+            <div class="degree">
+              <div class="eyebrow">Higher Education</div>
+              <h3>BSc Media Technology</h3>
+              <p>FH St. Pölten University of Applied Sciences · 2023–2026</p>
+              <p class="muted">Focus on audiovisual media production, post-production, camera technology, audio and
+                interactive media.</p>
+            </div>
+            <img alt="FH St. Pölten University of Applied Sciences logo" class="education-logo" src="assets/ustp.png" />
+          </article>
+          <article class="education-entry">
+            <div class="degree">
+              <div class="eyebrow">Secondary Technical Education</div>
+              <h3>Media Technology</h3>
+              <p>HTL Donaustadt · High School Diploma, 2019</p>
+              <p class="muted">Technical education in media technology with a focus on audiovisual production and
+                digital media.</p>
+            </div>
+            <img alt="HTL Donaustadt logo" class="education-logo htl-logo" src="assets/htl-donaustadt.png" />
+          </article>
+        </div>
+        <article class="thesis">
+          <div>
+            <div class="eyebrow">Bachelor Thesis · In Progress, 2026</div>
+            <h3>Aestheticized Violence in Japanese Horror Films</h3>
+            <p><em>An audiovisual analysis of Tokyo Gore Police and Tetsuo: The Iron Man</em></p>
+            <p class="muted">Exploring how editing, sound design, practical effects and body imagery shape the
+              aesthetics of violence in Japanese horror cinema.</p>
+          </div>
+          <img alt="Visual references for the bachelor thesis" class="thesis-image" src="assets/thesis.png" />
+        </article>
+      </div>
+    </section>
+    <section id="tools">
+      <div class="shell">
+        <h2 class="section-title">Tools &amp; Certifications</h2>
+        <div class="tools-grid">
+          <div class="tool-group">
+            <h3>Edit</h3>
+            <ul class="tools-list">
+              <li>Premiere Pro</li>
+              <li>Avid Media Composer</li>
+              <li>DaVinci Resolve</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <h3>Motion / 3D</h3>
+            <ul class="tools-list">
+              <li>After Effects</li>
+              <li>Blender</li>
+              <li>Autodesk Maya</li>
+              <li>TouchDesigner</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <h3>Camera / Production</h3>
+            <ul class="tools-list">
+              <li>Mirrorless Camera Systems</li>
+              <li>Lighting</li>
+              <li>Gimbal</li>
+              <li>On-Set Data Management</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <h3>Audio</h3>
+            <ul class="tools-list">
+              <li>Pro Tools</li>
+              <li>Ableton Live</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <h3>Certified</h3>
+            <div class="badges">
+              <img alt="Adobe Certified Professional Premiere Pro certification" class="certificate-logo"
+                src="assets/adobe.png" />
+              <img alt="Avid Media Composer certification" class="certificate-logo" src="assets/avid.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="shell">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="eyebrow">Alexander Hajnal · Vienna, Austria</div>
+            <ul class="contact-list">
+              <li><a href="tel:+4369919283681">+43 699 19283681</a></li>
+              <li><a href="mailto:alexander.hajnal@yahoo.com">alexander.hajnal@yahoo.com</a></li>
+              <li><a href="https://linkedin.com/in/hajnalex" rel="noopener" target="_blank">linkedin.com/in/hajnalex</a>
+              </li>
+            </ul>
+          </div>
+          <img alt="Alexander Hajnal operating a camera" class="contact-image" src="assets/contact.jpg" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="shell">© <span id="year"></span> Alexander Hajnal</div>
+  </footer>
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
