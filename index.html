@@ -65,14 +65,7 @@
       overflow: hidden;
     }
 
-    .hero-art {
-      width: min(940px, 94vw);
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    
     .hero-art img {
       display: block;
       width: 100%;
@@ -83,15 +76,24 @@
       filter: contrast(1.05);
     }
 
-    .hero-subtitle {
-      position: absolute;
-      left: 50%;
-      bottom: 4%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      font-size: clamp(.62rem, 1vw, .78rem);
-      letter-spacing: .07em;
-      text-transform: uppercase;
+    .hero-art{
+      width:min(940px,94vw);
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .hero-subtitle{
+      position:static;
+      transform:none;
+      margin-top:42px;
+      white-space:nowrap;
+      font-size:clamp(.62rem,1vw,.78rem);
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      text-align:center;
     }
 
     section {
@@ -178,10 +180,13 @@
       background: #ddd;
     }
 
-    .experiment-media img {
-      height: 100%;
-      object-fit: cover;
-    }
+    .experiment-media img,
+.experiment-media video{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
 
     .experiment h3 {
       margin: 12px 0 4px;
@@ -391,21 +396,45 @@
         object-fit: contain;
       }
 
-      .hero-subtitle {
-        bottom: 1%;
-        max-width: 90vw;
-        white-space: normal;
-        text-align: center;
-      }
-      .experiments-grid, .tools-grid { grid-template-columns: 1fr; }
-      .projects { gap: 64px; }
-      .section-title { margin-bottom: 24px; }
+      .hero-art{
+      width:min(940px,94vw);
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .hero-subtitle{
+      position:static;
+      transform:none;
+      margin-top:42px;
+      white-space:nowrap;
+      font-size:clamp(.62rem,1vw,.78rem);
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      text-align:center;
     }
   
-.project-link,.experiment-link{display:block;color:inherit;text-decoration:none}
-.project-link:hover h3,.experiment-link:hover h3{text-decoration:underline;text-underline-offset:6px}
-.project-link img,.experiment-link img{transition:transform .35s ease}
-.project-link:hover img,.experiment-link:hover img{transform:scale(1.03)}
+.experiment-link{
+display:block;
+color:inherit;
+text-decoration:none;
+}
+.experiment-link:hover h3{
+text-decoration:underline;
+text-underline-offset:6px;
+}
+.experiment-link:hover img,
+.experiment-link:hover video{
+transform:scale(1.03);
+}
+.experiment-link img,
+.experiment-link video{
+transition:transform .35s ease;
+}
+
+.experiment-link h3{text-decoration:underline;text-underline-offset:6px}
 </style>
 </head>
 <body>
@@ -428,26 +457,26 @@
 <div class="shell">
 <h2 class="section-title">Projects</h2>
 <div class="projects">
-<a class="project-link" href="https://www.youtube.com/watch?v=IS43i37ipHg" rel="noopener noreferrer" target="_blank"><article class="project">
+<article class="project">
 <div class="project-media"><img alt="Still from Observed" src="assets/observed.png"/></div>
 <h3>Observed (2026)</h3>
 <div class="meta">Production · Editing · Sound</div>
-</article></a>
-<a class="project-link" href="https://www.youtube.com/watch?v=Y2w3XV0UPJY" rel="noopener noreferrer" target="_blank"><article class="project">
+</article>
+<article class="project">
 <div class="project-media"><img alt="Still from Poisonous Flowers" src="assets/pf.png"/></div>
 <h3>Poisonous Flowers (2024)</h3>
 <div class="meta">Assistant Director · Art Director · Post-Production</div>
-</article></a>
-<a class="project-link" href="https://www.okto.tv/de/sendereihe/fhctv/video/676c43f5051f8/c-tv-191" rel="noopener noreferrer" target="_blank"><article class="project">
+</article>
+<article class="project">
 <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/lh.png"/></div>
 <h3>Löwinnenhof — Documentary Series (2024)</h3>
 <div class="meta">Camera · Editing</div>
-</article></a>
-<a class="project-link" href="https://youtu.be/MD8Xjh2CZpY" rel="noopener noreferrer" target="_blank"><article class="project">
+</article>
+<article class="project">
 <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/tomorrow.png"/></div>
 <h3>Tomorrow (2023)</h3>
 <div class="meta">Animtion · Story · Sounddesign</div>
-</article></a>
+</article>
 <article class="project placeholder-project">
 <div class="project-media placeholder-media">
 <span>VIDEO PROJECT 05</span>
@@ -462,8 +491,13 @@
 <div class="shell">
 <h2 class="section-title">3D / Experiments</h2>
 <div class="experiments-grid">
+
 <article class="experiment">
-<div class="experiment-media"><img alt="Metal Study Blender experiment" src="assets/3d.gif"/></div>
+<div class="experiment-media">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="assets/3d.mp4" type="video/mp4"/>
+</video>
+</div>
 <h3>Metal Study</h3>
 <div class="meta">Blender · Lighting &amp; Material Experiment</div>
 </article>
@@ -473,6 +507,7 @@
 <div class="meta">Unity VR Game · Sound Design &amp; Audio Production</div>
 <p>Designed and implemented environmental and mechanical sounds for an underground cave environment.</p>
 </article></a>
+
 </div>
 </div>
 </section>
@@ -502,7 +537,7 @@
 <div class="degree">
 <div class="eyebrow">Secondary Technical Education</div>
 <h3>Media Technology</h3>
-<p>HTL Donaustadt · Matura, 2019</p>
+<p>HTL Donaustadt · High School Diploma, 2019</p>
 <p class="muted">Technical education in media technology with a focus on audiovisual production and digital media.</p>
 </div>
 <img alt="HTL Donaustadt logo" class="education-logo htl-logo" src="assets/htl-donaustadt.png"/>
