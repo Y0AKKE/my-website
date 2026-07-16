@@ -113,15 +113,13 @@
     .projects {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 100px;
     }
 
     .project {
       width: min(760px, 100%);
     }
-
-    .project:nth-child(even) { align-self: flex-end; }
-    .project:nth-child(3) { align-self: center; }
 
     .project-media {
       overflow: hidden;
@@ -340,6 +338,50 @@ display:block;
       letter-spacing: .06em;
     }
 
+    
+    .project-link {
+      display: block;
+      width: min(900px, 100%);
+      margin: 0 auto;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .project-link .project {
+      width: 100%;
+    }
+
+    .project-link:hover h3 {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .experiment-link {
+      display: block;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .experiment-link h3 {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .project-link img,
+    .project-link video,
+    .experiment-link img,
+    .experiment-link video {
+      transition: transform .35s ease;
+    }
+
+    .project-link:hover img,
+    .project-link:hover video,
+    .experiment-link:hover img,
+    .experiment-link:hover video {
+      transform: scale(1.03);
+    }
+
     @media (max-width: 820px) {
       .nav {
         position: absolute;
@@ -363,10 +405,11 @@ display:block;
         grid-template-columns: 1fr;
       }
 
-      .project,
-      .project:nth-child(even),
-      .project:nth-child(3) {
-        align-self: stretch;
+      .project-link,
+      .placeholder-project {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
       }
 
       .portrait,
@@ -385,6 +428,7 @@ display:block;
       .shell { width: min(calc(100% - 24px), var(--max)); }
       .nav { top: 14px; left: 14px; }
       .hero { min-height: 68vh; }
+
       .hero-art {
         width: calc(100vw - 24px);
         max-width: 940px;
@@ -396,45 +440,21 @@ display:block;
         object-fit: contain;
       }
 
-      .hero-art{
-      width:min(940px,94vw);
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-    }
+      .hero-subtitle {
+        margin-top: 42px;
+        max-width: 90vw;
+        white-space: normal;
+        text-align: center;
+      }
 
-    .hero-subtitle{
-      position:static;
-      transform:none;
-      margin-top:42px;
-      white-space:nowrap;
-      font-size:clamp(.62rem,1vw,.78rem);
-      letter-spacing:.07em;
-      text-transform:uppercase;
-      text-align:center;
-    }
-  
-.experiment-link{
-display:block;
-color:inherit;
-text-decoration:none;
-}
-.experiment-link:hover h3{
-text-decoration:underline;
-text-underline-offset:6px;
-}
-.experiment-link:hover img,
-.experiment-link:hover video{
-transform:scale(1.03);
-}
-.experiment-link img,
-.experiment-link video{
-transition:transform .35s ease;
-}
+      .experiments-grid,
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
 
-.experiment-link h3{text-decoration:underline;text-underline-offset:6px}
+      .projects { gap: 64px; }
+      .section-title { margin-bottom: 24px; }
+    }
 </style>
 </head>
 <body>
@@ -457,26 +477,26 @@ transition:transform .35s ease;
 <div class="shell">
 <h2 class="section-title">Projects</h2>
 <div class="projects">
-<article class="project">
+<a class="project-link" href="https://www.youtube.com/watch?v=IS43i37ipHg" rel="noopener noreferrer" target="_blank"><article class="project">
 <div class="project-media"><img alt="Still from Observed" src="assets/observed.png"/></div>
 <h3>Observed (2026)</h3>
 <div class="meta">Production · Editing · Sound</div>
-</article>
-<article class="project">
+</article></a>
+<a class="project-link" href="https://www.youtube.com/watch?v=Y2w3XV0UPJY" rel="noopener noreferrer" target="_blank"><article class="project">
 <div class="project-media"><img alt="Still from Poisonous Flowers" src="assets/pf.png"/></div>
 <h3>Poisonous Flowers (2024)</h3>
 <div class="meta">Assistant Director · Art Director · Post-Production</div>
-</article>
-<article class="project">
+</article></a>
+<a class="project-link" href="https://www.okto.tv/de/sendereihe/fhctv/video/676c43f5051f8/c-tv-191" rel="noopener noreferrer" target="_blank"><article class="project">
 <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/lh.png"/></div>
 <h3>Löwinnenhof — Documentary Series (2024)</h3>
 <div class="meta">Camera · Editing</div>
-</article>
-<article class="project">
+</article></a>
+<a class="project-link" href="https://youtu.be/MD8Xjh2CZpY" rel="noopener noreferrer" target="_blank"><article class="project">
 <div class="project-media"><img alt="Löwinnenhof documentary series" src="assets/tomorrow.png"/></div>
 <h3>Tomorrow (2023)</h3>
-<div class="meta">Animtion · Story · Sounddesign</div>
-</article>
+<div class="meta">Animation · Story · Sound Design</div>
+</article></a>
 <article class="project placeholder-project">
 <div class="project-media placeholder-media">
 <span>VIDEO PROJECT 05</span>
@@ -491,7 +511,6 @@ transition:transform .35s ease;
 <div class="shell">
 <h2 class="section-title">3D / Experiments</h2>
 <div class="experiments-grid">
-
 <article class="experiment">
 <div class="experiment-media">
 <video autoplay="" loop="" muted="" playsinline="">
@@ -507,7 +526,6 @@ transition:transform .35s ease;
 <div class="meta">Unity VR Game · Sound Design &amp; Audio Production</div>
 <p>Designed and implemented environmental and mechanical sounds for an underground cave environment.</p>
 </article></a>
-
 </div>
 </div>
 </section>
